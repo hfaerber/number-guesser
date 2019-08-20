@@ -3,20 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>Number Guesser</title>
-    <link href="styles.css" type="text/stylesheet" rel="stylesheet"/>
+    <link href="styles.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
       <h1>NUMBER<span>GUESSER</span></h1>
-      <h4>ULTIMATE CHALLENGER EDITION</H4>
+      <div class="subheader-box">
+        <div class="white-line"></div>
+        <h4 class="white-subheader">ULTIMATE CHALLENGER EDITION</H4>
+        <div class="white-line"></div>
+      </div>
     </header>
     <main>
       <section class="left-column">
         <article class="game-box">
           <form action=" ">
             <h5>Set Range</h5>
-            <label>Min Range<input type="text" name="min-range"/></label>
-            <label>Max Range<input type="text" name="max-range"/></label>
+            <label>Min Range<input type="number" name="min-range"/></label>
+            <label>Max Range<input type="number" name="max-range"/></label>
             <input type="submit" name="UPDATE"/>
           </form>
         </article>
@@ -25,10 +30,10 @@
           <form action=" ">
             <h5>Challenger 1</h5>
             <label>Name<input type="text" name="name-one"/></label>
-            <label>Guess<input type="text" name="guess-one"/></label>
+            <label>Guess<input type="number" name="guess-one"/></label>
             <h5>Challenger 2</h5>
             <label>Name<input type="text" name="name-two"/></label>
-            <label>Guess<input type="text" name="guess-two"/></label>
+            <label>Guess<input type="number" name="guess-two"/></label>
             <input type="submit" name="submit" value="SUBMIT BUTTON"/>
             <input type="submit" name="reset" value="RESET GAME"/>
             <input type="submit" name="clear" value="CLEAR GAME"/>
