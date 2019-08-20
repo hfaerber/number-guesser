@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Number Guesser</title>
+    <link href="styles.css" type="text/stylesheet" rel="stylesheet"/>
+  </head>
+  <body>
+    <header>
+      <h1>NUMBER<span>GUESSER</span></h1>
+      <h4>ULTIMATE CHALLENGER EDITION</H4>
+    </header>
+    <main>
+      <section class="left-column">
+        <article class="game-box">
+          <h5>Set Range</h5>
+          <form action=" ">
+            <label>Min Range<input type="text" name="min-range"/></label>
+            <label>Max Range<input type="text" name="max-range"/></label>
+            <input type="submit" name="UPDATE"/>
+          </form>
+        </article>
+        <article class="game-box">
+          <p>The Current Range is <span>1</span>to<span>100</span></p>
+        </article>
+        <article class="game-box"></article>
+      </section>
+      <section class="right-column">
+        <article class="game-box" id="winner-card"></article>
+      </section>
+
+    </main>
+
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
