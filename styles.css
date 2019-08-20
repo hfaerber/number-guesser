@@ -1,0 +1,31 @@
+* {
+  border: 1px solid blue;
+}
+
+header {
+  background-color: #404041;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: #DD1972;
+}
+
+.subheader-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.white-subheader {
+  color: #ffffff;
+}
+
+.white-line {
+  background-color: #ffffff;
+  height: 1px;
+  width: 90px;
+}
