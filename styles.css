@@ -1,5 +1,5 @@
 * {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -98,6 +98,12 @@ button {
 
 }
 
+/* .winner-card-upper-two-thirds { */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+/* } */
+
 .winner-card-top {
   display: flex;
   justify-content: center;
@@ -114,10 +120,19 @@ button {
   margin: 5px 0 5px 0;
 }
 
-.winner-card-middle {
+.winner-card-middle-box {
+  display: flex;
+  justify-content: center;
+}
+
+.winner-card-middle-text {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 26px 0px 23px 10px;
+  width: 90%;
+  border-top: 1px solid lightgrey;
+  border-bottom:  1px solid lightgrey;
 }
 
 h3 {
@@ -139,3 +154,10 @@ h3 {
 /* add font to buttons maybe forms individualls */
 /* h3 came with margin that i had to alter - do others? */
 /* margin spacing on winner-card center? */
+
+/* update font weight in winner card */
+/* maybe remove class from h5 since scott fixed margins on h5 directly */
+/* add colors */
+/* add white space btw challenger 2 and winner and their respective */
+/* change empty div to topbottom border DONE*/
+/* find svg image for the x button in the corner of the winner box */
