@@ -59,18 +59,26 @@ main {
   justify-content: space-around;
 }
 
-.card-title {
+h5 {
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+.latest-and-blank {
   margin: 10px 0;
   font-weight: 700;
 }
 
 .card-two-buttons {
   display: block;
+  display: flex;
+  justify-content: space-around;
 }
 
 button {
   height: 20px;
   border-radius: 20px;
+  margin
 }
 
 .right-column {
