@@ -75,7 +75,7 @@ h5 {
   justify-content: space-around;
 }
 
-button {
+.button {
   height: 40px;
   border-radius: 30px;
   font-size: 16px;
