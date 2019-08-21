@@ -62,8 +62,9 @@ main {
   font-weight: 700;
 }
 
-input {
-  
+button {
+  height: 20px;
+  border-radius: 20px;
 }
 
 .right-column {
