@@ -76,9 +76,12 @@ h5 {
 }
 
 button {
-  height: 20px;
-  border-radius: 20px;
-  margin
+  height: 40px;
+  border-radius: 30px;
+  font-size: 16px;
+  background-color: #6e6e6e;
+  color: #ffffff;
+  margin: 10px;
 }
 
 .right-column {
