@@ -15,8 +15,6 @@ h1 {
   color: #DD1972;
 }
 
-
-
 .subheader-box {
   display: flex;
   flex-direction: row;
@@ -33,4 +31,67 @@ h1 {
   width: 90px;
 }
 
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-column {
+  width: 50%;
+}
+
+.right-column {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#winner-card {
+  border: 2px solid lightgrey;
+  margin: 10px;
+  width: 90%;
+
+}
+
+.winner-card-top {
+  display: flex;
+  justify-content: center;
+}
+
+.vs {
+  padding: 0px 20px;
+}
+
+.grey-line {
+  background-color: #D0D2D3;
+  height: 1px;
+  width: 85%;
+  margin: 5px 0 5px 0;
+}
+
+.winner-card-middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h3 {
+  margin: 5px;
+}
+
+.winner-card-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+}
+
+.winner-card-stats {
+  padding: 10px;
+}
+
 /* add font to buttons maybe forms individualls */
+/* h3 came with margin that i had to alter - do others? */
+/* margin spacing on winner-card center? */
