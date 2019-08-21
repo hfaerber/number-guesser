@@ -38,6 +38,32 @@ main {
 
 .left-column {
   width: 50%;
+  background-color: #f7f7f7
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.game-box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  border: 2px solid lightgrey;
+}
+
+.range-input {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-title {
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+input {
+  
 }
 
 .right-column {
