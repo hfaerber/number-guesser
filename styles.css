@@ -54,6 +54,12 @@ main {
   margin: 7px 15px;
 }
 
+.game-box-score {
+  display: flex;
+  flex-direction: column;
+  margin: 7px 15px;
+}
+
 .range-input {
   display: flex;
   justify-content: space-around;
@@ -67,12 +73,19 @@ h5 {
 .latest-and-blank {
   margin: 10px 0;
   font-weight: 700;
+  display: block;
 }
 
 .card-two-buttons {
   display: block;
   display: flex;
   justify-content: space-around;
+}
+
+.current-guess-boxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .button {
