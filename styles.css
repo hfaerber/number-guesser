@@ -38,6 +38,50 @@ main {
 
 .left-column {
   width: 50%;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: space-around;
+}
+
+.game-box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  border: 2px solid lightgrey;
+  margin: 7px 15px;
+}
+
+.range-input {
+  display: flex;
+  justify-content: space-around;
+}
+
+h5 {
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+.latest-and-blank {
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+.card-two-buttons {
+  display: block;
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  height: 40px;
+  border-radius: 30px;
+  font-size: 16px;
+  background-color: #6e6e6e;
+  color: #ffffff;
+  margin: 10px;
 }
 
 .right-column {
