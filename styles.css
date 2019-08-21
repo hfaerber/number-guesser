@@ -1,5 +1,5 @@
 * {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -14,8 +14,6 @@ header {
 h1 {
   color: #DD1972;
 }
-
-
 
 .subheader-box {
   display: flex;
@@ -33,4 +31,34 @@ h1 {
   width: 90px;
 }
 
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-column,
+.right-column {
+  width: 50%;
+}
+
+.vs-container {
+  display: flex;
+  justify-content: center;
+}
+
+.vs {
+  padding: 0px 20px;
+}
+
+.grey-line {
+  background-color: #D0D2D3;
+  height: 1px;
+  width: 85%;
+}
+
+.winner-card-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 /* add font to buttons maybe forms individualls */
