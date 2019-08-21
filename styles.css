@@ -88,6 +88,11 @@ h5 {
   justify-content: center;
 }
 
+.current-guess-box-one,
+.current-guess-box-two {
+  width: 50%;
+}
+
 .button {
   height: 40px;
   border-radius: 30px;
