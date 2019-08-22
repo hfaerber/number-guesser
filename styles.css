@@ -54,6 +54,14 @@ main {
   margin: 7px 15px;
 }
 
+.game-box-score {
+  display: flex;
+  flex-direction: column;
+  margin: 7px 15px;
+  background-color: #ffffff;
+  border: 2px solid lightgrey;
+}
+
 .range-input {
   display: flex;
   justify-content: space-around;
@@ -67,6 +75,7 @@ h5 {
 .latest-and-blank {
   margin: 10px 0;
   font-weight: 700;
+  display: block;
 }
 
 .card-two-buttons {
@@ -75,7 +84,39 @@ h5 {
   justify-content: space-around;
 }
 
-button {
+.current-guess-boxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.vertical-line {
+  border-left: thin solid #D0D2D3;
+  height: 100%;
+}
+
+.current-guess-box-one,
+.current-guess-box-two {
+  width: 50%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.challenger-one-guess,
+.challenger-two-guess {
+  font-weight: 700;
+  color: #DD1972;
+  font-size: 50px;
+  margin -1px 0 0;
+}
+
+.guess {
+  margin: -5px;
+}
+
+.button {
   height: 40px;
   border-radius: 30px;
   font-size: 16px;
