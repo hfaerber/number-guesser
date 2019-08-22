@@ -103,10 +103,14 @@ button {
 .winner-card-top {
   display: flex;
   justify-content: center;
+  align-items: center;
+  font-size: 24px;
 }
 
 .vs {
   padding: 0px 20px;
+  margin: 8px 6px;
+  font-size: 19px;
 }
 
 .grey-line {
@@ -121,18 +125,25 @@ button {
   justify-content: center;
 }
 
-.winner-card-middle-text {
+.winner-card-middle-text-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 26px 0px 23px 10px;
+  justify-content: center;
   width: 90%;
-  border-top: 1px solid lightgrey;
-  border-bottom:  1px solid lightgrey;
+  border-top: 2px solid lightgrey;
+  border-bottom: 2px solid lightgrey;
 }
 
 h3 {
-  margin: 5px;
+  margin: -5px;
+  font-weight: 300;
+  font-size: 42px;
+}
+
+#winner-card-name {
+  font-weight: 700;
+  padding-bottom: 3px;
 }
 
 .winner-card-bottom {
@@ -140,20 +151,17 @@ h3 {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  padding: 10px;
+  padding: 0px 20px 0px 20px;
+  font-size: 22px;
 }
 
 .winner-card-stats {
   padding: 10px;
+  font-weight: 700;
 }
 
-/* add font to buttons maybe forms individualls */
-/* h3 came with margin that i had to alter - do others? */
-/* margin spacing on winner-card center? */
+.lighter-h5 {
+  font-weight: 300;
+}
 
-/* update font weight in winner card */
-/* maybe remove class from h5 since scott fixed margins on h5 directly */
-/* add colors */
-/* add white space btw challenger 2 and winner and their respective */
-/* change empty div to topbottom border DONE*/
 /* find svg image for the x button in the corner of the winner box */
