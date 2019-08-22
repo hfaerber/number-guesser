@@ -14,8 +14,25 @@ var submitRangeButton = document.querySelector("#submit-range-button");
 
 submitRangeButton.addEventListener("click", function() {
   var minRangeValue = minRangeField.value;
+  // var intMin = parseInt(minRangeValue, 10);
+  // rangeStart.innerText = intMin;
   rangeStart.innerText = minRangeValue;
   var maxRangeValue = maxRangeField.value;
   rangeEnd.innerText = maxRangeValue;
   event.preventDefault();
 });
+
+var nameOne = document.querySelector("#name-one-input");
+var nameTwo = document.querySelector("#name-two-input");
+var guessOne = document.querySelector("#guess-one-input");
+var guessTwo = document.querySelector("#guess-two-input");
+var submitGuessButton = document.querySelector("#submit-guess-button");
+var scoreCardNameOne = document.querySelector(".score-card-name-one");
+var scoreCardNameTwo = document.querySelector(".score-card-name-two");
+var scoreCardGuessOne = document.querySelector(".challenger-one-guess");
+var scoreCardGuessTwo = document.querySelector(".challenger-two-guess");
+
+submitGuessButton.addEventListener("click", function(){
+  var nameOneValue = nameOne.value;
+
+})
