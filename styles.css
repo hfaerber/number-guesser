@@ -3,16 +3,26 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 header {
   background-color: #404041;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  padding: 30px;
 }
 
 h1 {
   color: #DD1972;
+  font-size: 80px;
 }
 
 .subheader-box {
@@ -23,12 +33,15 @@ h1 {
 
 .white-subheader {
   color: #ffffff;
+  font-weight: 300;
+  font-size: 27px;
 }
 
 .white-line {
+  margin: 0px 20px;
   background-color: #ffffff;
-  height: 1px;
-  width: 90px;
+  height: 2px;
+  width: 117px;
 }
 
 main {
@@ -201,7 +214,7 @@ h3 {
   font-weight: 700;
 }
 
-.lighter-h5 {
+.lighter-h {
   font-weight: 300;
 }
 

@@ -6,14 +6,16 @@
 // var minRangeValue = minRangeField.value;
 //
 // var minRangeInput = document.querySelector("#min-range-input").value;
-var minRangeField = document.querySelector("#min-range-input");
+// var minRangeField = document.querySelector("#min-range-input");
+var minRangeValue = 1;
 var rangeStart = document.querySelector("#range-start");
 var maxRangeField = document.querySelector("#max-range-input");
 var rangeEnd = document.querySelector("#range-end");
 var submitRangeButton = document.querySelector("#submit-range-button");
 
 submitRangeButton.addEventListener("click", function() {
-  var minRangeValue = minRangeField.value;
+  minRangeValue = parseInt(document.querySelector("#min-range-input").value, 10);
+  // the minRangeValue var might be an issue bc it will only be able to be called in this function
   // var intMin = parseInt(minRangeValue, 10);
   // rangeStart.innerText = intMin;
   rangeStart.innerText = minRangeValue;
