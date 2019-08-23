@@ -34,5 +34,12 @@ var scoreCardGuessTwo = document.querySelector(".challenger-two-guess");
 
 submitGuessButton.addEventListener("click", function(){
   var nameOneValue = nameOne.value;
-
-})
+  scoreCardNameOne.innerText = nameOneValue;
+  var nameTwoValue = nameTwo.value;
+  scoreCardNameTwo.innerText = nameTwoValue;
+  var guessOneValue = guessOne.value;
+  scoreCardGuessOne.innerText = guessOneValue;
+  var guessTwoValue = guessTwo.value;
+  scoreCardGuessTwo.innerText = guessTwoValue;
+  event.preventDefault();
+});
