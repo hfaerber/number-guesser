@@ -19,6 +19,12 @@ function setRange(event){
   event.preventDefault();
 }
 
+// function getRandom(){
+//   min = Math.Ceil(minRangeValue);
+//   max = Math.floor(maxRangeValue);
+//
+// }
+
 var nameOne = document.querySelector("#name-one-input");
 var nameTwo = document.querySelector("#name-two-input");
 var guessOne = document.querySelector("#guess-one-input");
@@ -29,23 +35,21 @@ var scoreCardNameTwo = document.querySelectorAll(".score-card-name-two");
 var scoreCardGuessOne = document.querySelector(".challenger-one-guess");
 var scoreCardGuessTwo = document.querySelector(".challenger-two-guess");
 
-submitGuessButton.addEventListener("click", function(){
+submitGuessButton.addEventListener("click", displayGameInfo);
+
+function displayGameInfo(event){
   for(var i = 0; i < scoreCardNameOne.length; i++){
     scoreCardNameOne[i].innerText = nameOne.value;
     }
-  // var nameTwoValue = nameTwo.value;
   for(var i = 0; i < scoreCardNameTwo.length; i++){
     scoreCardNameTwo[i].innerText = nameTwo.value;
   }
-  // scoreCardNameTwo.innerText = nameTwoValue;
   var guessOneValue = guessOne.value;
   scoreCardGuessOne.innerText = guessOneValue;
   var guessTwoValue = guessTwo.value;
   scoreCardGuessTwo.innerText = guessTwoValue;
   event.preventDefault();
-});
-
-
+};
 // psuedocode for clear button functionality
 // set button to be disabled on page load
 //
