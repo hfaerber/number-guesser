@@ -1,40 +1,55 @@
-var minRangeValue = 1;
+var minRangeValue = document.querySelector("#min-range-input");
 var rangeStart = document.querySelector("#range-start");
-var maxRangeValue = 100;
+var maxRangeValue = document.querySelector("#max-range-input");
 var rangeEnd = document.querySelector("#range-end");
 var submitRangeButton = document.querySelector("#submit-range-button");
 
-submitRangeButton.addEventListener("click", function() {
-  minRangeValue = parseInt(document.querySelector("#min-range-input").value, 10);
-  rangeStart.innerText = minRangeValue;
-  maxRangeValue = parseInt(document.querySelector("#max-range-input").value, 10);
-  rangeEnd.innerText = maxRangeValue;
+submitRangeButton.addEventListener("click", setRange);
+  // minRangeValue = parseInt(document.querySelector("#min-range-input").value, 10);
+//   rangeStart.innerText = minRangeValue;
+//   // maxRangeValue = parseInt(document.querySelector("#max-range-input").value, 10);
+//   rangeEnd.innerText = maxRangeValue;
+// });
+
+function setRange(event){
+  console.log(minRangeValue.value);
+  console.log(maxRangeValue.value);
+  rangeStart.innerHTML = minRangeValue.value;
+  rangeEnd.innerHTML = maxRangeValue.value;
   event.preventDefault();
-});
+}
+
+// function getRandom(){
+//   min = Math.Ceil(minRangeValue);
+//   max = Math.floor(maxRangeValue);
+//
+// }
 
 var nameOne = document.querySelector("#name-one-input");
 var nameTwo = document.querySelector("#name-two-input");
 var guessOne = document.querySelector("#guess-one-input");
 var guessTwo = document.querySelector("#guess-two-input");
 var submitGuessButton = document.querySelector("#submit-guess-button");
-var scoreCardNameOne = document.querySelector(".score-card-name-one");
-var scoreCardNameTwo = document.querySelector(".score-card-name-two");
+var scoreCardNameOne = document.querySelectorAll(".score-card-name-one");
+var scoreCardNameTwo = document.querySelectorAll(".score-card-name-two");
 var scoreCardGuessOne = document.querySelector(".challenger-one-guess");
 var scoreCardGuessTwo = document.querySelector(".challenger-two-guess");
 
-submitGuessButton.addEventListener("click", function(){
-  var nameOneValue = nameOne.value;
-  scoreCardNameOne.innerText = nameOneValue;
-  var nameTwoValue = nameTwo.value;
-  scoreCardNameTwo.innerText = nameTwoValue;
+submitGuessButton.addEventListener("click", displayGameInfo);
+
+function displayGameInfo(event){
+  for(var i = 0; i < scoreCardNameOne.length; i++){
+    scoreCardNameOne[i].innerText = nameOne.value;
+    }
+  for(var i = 0; i < scoreCardNameTwo.length; i++){
+    scoreCardNameTwo[i].innerText = nameTwo.value;
+  }
   var guessOneValue = guessOne.value;
   scoreCardGuessOne.innerText = guessOneValue;
   var guessTwoValue = guessTwo.value;
   scoreCardGuessTwo.innerText = guessTwoValue;
   event.preventDefault();
-});
-
-
+};
 // psuedocode for clear button functionality
 // set button to be disabled on page load <<done in html
 // Set up addEventListener listening for any typed input in any of the 4 fields THEN
