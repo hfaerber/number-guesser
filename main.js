@@ -1,16 +1,23 @@
-var minRangeValue = 1;
+var minRangeValue = document.querySelector("#min-range-input");
 var rangeStart = document.querySelector("#range-start");
-var maxRangeValue = 100;
+var maxRangeValue = document.querySelector("#max-range-input");
 var rangeEnd = document.querySelector("#range-end");
 var submitRangeButton = document.querySelector("#submit-range-button");
 
-submitRangeButton.addEventListener("click", function() {
-  minRangeValue = parseInt(document.querySelector("#min-range-input").value, 10);
-  rangeStart.innerText = minRangeValue;
-  maxRangeValue = parseInt(document.querySelector("#max-range-input").value, 10);
-  rangeEnd.innerText = maxRangeValue;
+submitRangeButton.addEventListener("click", setRange);
+  // minRangeValue = parseInt(document.querySelector("#min-range-input").value, 10);
+//   rangeStart.innerText = minRangeValue;
+//   // maxRangeValue = parseInt(document.querySelector("#max-range-input").value, 10);
+//   rangeEnd.innerText = maxRangeValue;
+// });
+
+function setRange(event){
+  console.log(minRangeValue.value);
+  console.log(maxRangeValue.value);
+  rangeStart.innerHTML = minRangeValue.value;
+  rangeEnd.innerHTML = maxRangeValue.value;
   event.preventDefault();
-});
+}
 
 var nameOne = document.querySelector("#name-one-input");
 var nameTwo = document.querySelector("#name-two-input");
