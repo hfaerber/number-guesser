@@ -36,14 +36,36 @@ submitGuessButton.addEventListener("click", function(){
 
 
 // psuedocode for clear button functionality
-// set button to be disabled on page load
-//
+// set button to be disabled on page load <<done in html
 // Set up addEventListener listening for any typed input in any of the 4 fields THEN
-//
+
+// first declare variable for the 4 fields (then think I need to add Event Bubbling or forloop)
 // fire function that changes CSS style to darkgrey
-//
 // enables button
-//
+var inputFieldsArr = [nameOne, nameTwo, guessOne, guessTwo];
+var clearGameButton = document.querySelector(".clear-button");
+
+for(var i = 0; i < inputFieldsArr.length; i++) {
+  inputFieldsArr[i].addEventListener("keydown", makeDarkGrey);
+}
+
+function makeDarkGrey () {
+  clearGameButton.classList.remove("clear-button");
+  clearGameButton.disabled = false;
+  // is this actually disabling?  or do i need to set disable = true on page load, then false w event?
+};
+
+clearGameButton.addEventListener("click", clearGameFields);
+
+function clearGameFields () {
+  for(var i = 0; i < inputFieldsArr.length; i++) {
+  inputFieldsArr[i].value = "";
+}
+// does this have to be another for loop? or can it reference the about for loop?
+  clearGameButton.classList.add("clear-button");
+  clearGameButton.disabled = true;
+};
+
 // Set up next addEventListener listening for click on button THEN
 //
 // clear all 4 fields
