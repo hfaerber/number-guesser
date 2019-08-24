@@ -26,8 +26,11 @@ submitGuessButton.addEventListener("click", function(){
   for(var i = 0; i < scoreCardNameOne.length; i++){
     scoreCardNameOne[i].innerText = nameOne.value;
     }
-  var nameTwoValue = nameTwo.value;
-  scoreCardNameTwo.innerText = nameTwoValue;
+  // var nameTwoValue = nameTwo.value;
+  for(var i = 0; i < scoreCardNameTwo.length; i++){
+    scoreCardNameTwo[i].innerText = nameTwo.value;
+  }
+  // scoreCardNameTwo.innerText = nameTwoValue;
   var guessOneValue = guessOne.value;
   scoreCardGuessOne.innerText = guessOneValue;
   var guessTwoValue = guessTwo.value;
