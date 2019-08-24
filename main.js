@@ -36,10 +36,22 @@ submitGuessButton.addEventListener("click", function(){
 
 
 // psuedocode for clear button functionality
-// set button to be disabled on page load
-//
+// set button to be disabled on page load <<done in html
 // Set up addEventListener listening for any typed input in any of the 4 fields THEN
-//
+
+// first declare variable for the 4 fields (then think I need to add Event Bubbling or forloop)
+var inputFieldsArr = [nameOne, nameTwo, guessOne, guessTwo];
+var clearGameButton = document.querySelector(".clear-button");
+
+for(var i = 0; i < inputFieldsArr.length; i++) {
+  inputFieldsArr[i].addEventListener("keydown", makeDarkGrey);
+}
+
+function makeDarkGrey () {
+  clearGameButton.classList.remove("clear-button");
+};
+
+
 // fire function that changes CSS style to darkgrey
 //
 // enables button

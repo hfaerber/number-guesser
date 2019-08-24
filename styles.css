@@ -134,12 +134,13 @@ h5 {
   border-radius: 30px;
   font-size: 16px;
   background-color: #6e6e6e;
+  border: 0;
   color: #ffffff;
   margin: 10px;
 }
 
-#reset-button,
-#clear-button {
+/* .reset-button, */
+.clear-button {
   background-color: #D0D2D3;
 }
 
