@@ -138,6 +138,11 @@ h5 {
   margin: 10px;
 }
 
+#reset-button,
+#clear-button {
+  background-color: #D0D2D3;
+}
+
 .right-column {
   width: 50%;
   display: flex;

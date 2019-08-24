@@ -1,25 +1,13 @@
-// set range box functionality for min Range
-
-// minRangeInput could also be broken down into two variables:
-
-// var minRangeField = document.querySelector("#min-range-input");
-// var minRangeValue = minRangeField.value;
-//
-// var minRangeInput = document.querySelector("#min-range-input").value;
-// var minRangeField = document.querySelector("#min-range-input");
 var minRangeValue = 1;
 var rangeStart = document.querySelector("#range-start");
-var maxRangeField = document.querySelector("#max-range-input");
+var maxRangeValue = 100;
 var rangeEnd = document.querySelector("#range-end");
 var submitRangeButton = document.querySelector("#submit-range-button");
 
 submitRangeButton.addEventListener("click", function() {
   minRangeValue = parseInt(document.querySelector("#min-range-input").value, 10);
-  // the minRangeValue var might be an issue bc it will only be able to be called in this function
-  // var intMin = parseInt(minRangeValue, 10);
-  // rangeStart.innerText = intMin;
   rangeStart.innerText = minRangeValue;
-  var maxRangeValue = maxRangeField.value;
+  maxRangeValue = parseInt(document.querySelector("#max-range-input").value, 10);
   rangeEnd.innerText = maxRangeValue;
   event.preventDefault();
 });
@@ -45,3 +33,23 @@ submitGuessButton.addEventListener("click", function(){
   scoreCardGuessTwo.innerText = guessTwoValue;
   event.preventDefault();
 });
+
+
+// psuedocode for clear button functionality
+// set button to be disabled on page load
+//
+// Set up addEventListener listening for any typed input in any of the 4 fields THEN
+//
+// fire function that changes CSS style to darkgrey
+//
+// enables button
+//
+// Set up next addEventListener listening for click on button THEN
+//
+// clear all 4 fields
+//
+// change CSS style back to light darkgrey
+//
+// disable button
+//
+// then should be listening for addEventListener #1 again for typed input
