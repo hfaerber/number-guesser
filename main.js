@@ -33,3 +33,23 @@ submitGuessButton.addEventListener("click", function(){
   scoreCardGuessTwo.innerText = guessTwoValue;
   event.preventDefault();
 });
+
+
+// psuedocode for clear button functionality
+// set button to be disabled on page load
+//
+// Set up addEventListener listening for any typed input in any of the 4 fields THEN
+//
+// fire function that changes CSS style to darkgrey
+//
+// enables button
+//
+// Set up next addEventListener listening for click on button THEN
+//
+// clear all 4 fields
+//
+// change CSS style back to light darkgrey
+//
+// disable button
+//
+// then should be listening for addEventListener #1 again for typed input
