@@ -209,7 +209,7 @@ h3 {
 .winner-card-bottom {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   padding: 0px 20px 0px 20px;
   font-size: 22px;
@@ -220,8 +220,35 @@ h3 {
   font-weight: 700;
 }
 
+.bottom-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .lighter-h {
   font-weight: 300;
+}
+
+/* -----
+SVG Icons - svgicons.sparkk.fr
+----- */
+
+.svg-icon {
+  width: 1em;
+  height: 1em;
+  margin: 0px 15px 0px 81px;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #4691f6;
+}
+
+.svg-icon circle {
+  stroke: #4691f6;
+  stroke-width: 1;
 }
 
 /* find svg image for the x button in the corner of the winner box */
