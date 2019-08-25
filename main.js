@@ -14,15 +14,19 @@ var scoreCardGuessOne = document.querySelector(".challenger-one-guess");
 var scoreCardGuessTwo = document.querySelector(".challenger-two-guess");
 var inputFieldsArr = [nameOne, nameTwo, guessOne, guessTwo];
 var clearGameButton = document.querySelector(".clear-button");
+// var min = parseInt(minRangeValue.value, 10);
+// var max = parseInt(maxRangeValue.value, 10);
 
+// add event listener to update button to fire get random interval
+// change name of submit range button to update range button
 submitRangeButton.addEventListener("click", setRange);
 submitGuessButton.addEventListener("click", displayGameInfo);
 
-
-function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max-min)) + min;
+function getRandomInt() {
+  var minNum = Math.ceil(parseInt(minRangeValue.value, 10));
+  var maxNum = Math.floor(parseInt(maxRangeValue.value, 10));
+  // storedRandomNum creating a new variable that will be global due to lack of javascript
+  storedRandomNum =  Math.floor(Math.random() * (maxNum-minNum)) + minNum;
 }
 
 function setRange(event){
