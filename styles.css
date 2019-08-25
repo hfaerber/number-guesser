@@ -22,7 +22,11 @@ header {
 
 h1 {
   color: #DD1972;
-  font-size: 80px;
+  font-size: 4.3rem;
+}
+
+.light-title {
+  font-weight: 300;
 }
 
 .subheader-box {
@@ -34,14 +38,14 @@ h1 {
 .white-subheader {
   color: #ffffff;
   font-weight: 300;
-  font-size: 27px;
+  font-size: 1.4rem;
 }
 
 .white-line {
-  margin: 0px 20px;
+  margin: 0px 15px;
   background-color: #ffffff;
-  height: 2px;
-  width: 117px;
+  height: 1px;
+  width: 6.7rem;
 }
 
 main {
@@ -81,9 +85,11 @@ main {
 }
 
 h5 {
-  margin: 10px 0;
+  margin: 11px 0;
   font-weight: 700;
 }
+
+
 
 .latest-and-blank {
   margin: 10px 0;
@@ -155,8 +161,8 @@ h5 {
 
 #winner-card {
   border: 2px solid darkgrey;
-  margin: 10px;
-  width: 90%;
+  margin: 20px;
+  width: 88%;
   color: #6e6e6e;
 }
 
@@ -164,21 +170,21 @@ h5 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
+  font-size: 1.4rem;
 }
 
 .vs {
   padding: 0px 20px;
-  margin: 8px 6px;
-  font-size: 19px;
+  margin: 7px 6px 11px 6px;
+  font-size: 1.1rem;
 }
 
-.grey-line {
+/* .grey-line {
   background-color: #D0D2D3;
   height: 1px;
   width: 85%;
   margin: 5px 0 5px 0;
-}
+} */
 
 .winner-card-middle-box {
   display: flex;
@@ -190,15 +196,15 @@ h5 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 90%;
+  width: 95%;
   border-top: 2px solid lightgrey;
   border-bottom: 2px solid lightgrey;
 }
 
 h3 {
-  margin: -5px;
+  margin: -6px;
   font-weight: 300;
-  font-size: 42px;
+  font-size: 2.3rem;
 }
 
 #winner-card-name {
@@ -212,12 +218,13 @@ h3 {
   justify-content: space-between;
   align-items: center;
   padding: 0px 20px 0px 20px;
-  font-size: 22px;
+  font-size: 1.2rem;
 }
 
 .winner-card-stats {
   padding: 10px;
   font-weight: 700;
+  font-size: 1.15rem;
 }
 
 .bottom-item {
@@ -228,6 +235,7 @@ h3 {
 
 .lighter-h {
   font-weight: 300;
+  font-size: 1.2rem;
 }
 
 /* -----
