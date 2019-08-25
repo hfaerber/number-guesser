@@ -3,28 +3,6 @@ var rangeStart = document.querySelector("#range-start");
 var maxRangeValue = document.querySelector("#max-range-input");
 var rangeEnd = document.querySelector("#range-end");
 var submitRangeButton = document.querySelector("#submit-range-button");
-
-submitRangeButton.addEventListener("click", setRange);
-  // minRangeValue = parseInt(document.querySelector("#min-range-input").value, 10);
-//   rangeStart.innerText = minRangeValue;
-//   // maxRangeValue = parseInt(document.querySelector("#max-range-input").value, 10);
-//   rangeEnd.innerText = maxRangeValue;
-// });
-
-function setRange(event){
-  console.log(minRangeValue.value);
-  console.log(maxRangeValue.value);
-  rangeStart.innerHTML = minRangeValue.value;
-  rangeEnd.innerHTML = maxRangeValue.value;
-  event.preventDefault();
-}
-
-// function getRandom(){
-//   min = Math.Ceil(minRangeValue);
-//   max = Math.floor(maxRangeValue);
-//
-// }
-
 var nameOne = document.querySelector("#name-one-input");
 var nameTwo = document.querySelector("#name-two-input");
 var guessOne = document.querySelector("#guess-one-input");
@@ -34,8 +12,20 @@ var scoreCardNameOne = document.querySelectorAll(".score-card-name-one");
 var scoreCardNameTwo = document.querySelectorAll(".score-card-name-two");
 var scoreCardGuessOne = document.querySelector(".challenger-one-guess");
 var scoreCardGuessTwo = document.querySelector(".challenger-two-guess");
+var inputFieldsArr = [nameOne, nameTwo, guessOne, guessTwo];
+var clearGameButton = document.querySelector(".clear-button");
 
+submitRangeButton.addEventListener("click", setRange);
 submitGuessButton.addEventListener("click", displayGameInfo);
+
+
+function setRange(event){
+  console.log(minRangeValue.value);
+  console.log(maxRangeValue.value);
+  rangeStart.innerHTML = minRangeValue.value;
+  rangeEnd.innerHTML = maxRangeValue.value;
+  event.preventDefault();
+}
 
 function displayGameInfo(event){
   for(var i = 0; i < scoreCardNameOne.length; i++){
@@ -57,8 +47,8 @@ function displayGameInfo(event){
 // first declare variable for the 4 fields (then think I need to add Event Bubbling or forloop)
 // fire function that changes CSS style to darkgrey
 // enables button
-var inputFieldsArr = [nameOne, nameTwo, guessOne, guessTwo];
-var clearGameButton = document.querySelector(".clear-button");
+
+
 
 for(var i = 0; i < inputFieldsArr.length; i++) {
   inputFieldsArr[i].addEventListener("keydown", makeDarkGrey);
