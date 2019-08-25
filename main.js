@@ -61,10 +61,10 @@ function displayGameInfo(event){
 
 
 for(var i = 0; i < inputFieldsArr.length; i++) {
-  inputFieldsArr[i].addEventListener("keydown", makeDarkGrey);
+  inputFieldsArr[i].addEventListener("keydown", disableButton);
 }
 
-function makeDarkGrey () {
+function disableButton () {
   clearGameButton.classList.remove("clear-button");
   clearGameButton.disabled = false;
   // is this actually disabling?  or do i need to set disable = true on page load, then false w event?
