@@ -17,7 +17,7 @@ header {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 30px;
+  padding: 20px;
 }
 
 h1 {
@@ -68,7 +68,7 @@ main {
   flex-wrap: wrap;
   background-color: #ffffff;
   border: 2px solid lightgrey;
-  margin: 7px 15px;
+  margin: 20px 20px;
 }
 
 .game-box-score {
@@ -81,12 +81,23 @@ main {
 
 .range-input {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 10px 15px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  font-size: 20px;
+  color: #6e6e6e;
 }
 
 h5 {
-  margin: 11px 0;
+  margin: 11px 0 11px 18px;
   font-weight: 700;
+  font-size: 24px;
+  color: #6e6e6e;
 }
 
 
@@ -138,11 +149,13 @@ h5 {
 .button {
   height: 40px;
   border-radius: 30px;
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0px 27px;
   background-color: #6e6e6e;
   border: 0;
   color: #ffffff;
-  margin: 10px;
+  margin: 10px 0px;
 }
 
 /* .reset-button, */
@@ -170,7 +183,12 @@ h5 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.4rem;
+}
+
+#vs-names {
+  font-size: 19px;
+  margin: 11px 0;
+  font-weight: 700;
 }
 
 .vs {
@@ -233,9 +251,10 @@ h3 {
   align-items: center;
 }
 
-.lighter-h {
+#lighter-h {
   font-weight: 300;
   font-size: 1.2rem;
+  margin-left: 0;
 }
 
 /* -----
