@@ -17,12 +17,16 @@ header {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 30px;
+  padding: 20px;
 }
 
 h1 {
   color: #DD1972;
-  font-size: 80px;
+  font-size: 4.3rem;
+}
+
+.light-title {
+  font-weight: 300;
 }
 
 .subheader-box {
@@ -34,14 +38,14 @@ h1 {
 .white-subheader {
   color: #ffffff;
   font-weight: 300;
-  font-size: 27px;
+  font-size: 1.4rem;
 }
 
 .white-line {
-  margin: 0px 20px;
+  margin: 0px 15px;
   background-color: #ffffff;
-  height: 2px;
-  width: 117px;
+  height: 1px;
+  width: 6.7rem;
 }
 
 main {
@@ -64,7 +68,7 @@ main {
   flex-wrap: wrap;
   background-color: #ffffff;
   border: 2px solid lightgrey;
-  margin: 7px 15px;
+  margin: 20px 20px;
 }
 
 .game-box-score {
@@ -77,12 +81,31 @@ main {
 
 .range-input {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0px 15px 25px 15px;
+}
+
+input {
+  width: 190px;
+  height: 38px;
+  padding: 10px;
+  margin: 4px 0px 0px 0px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  font-size: 20px;
+  color: #6e6e6e;
 }
 
 h5 {
-  margin: 10px 0;
+  /* margin: 11px 0 11px 18px; */
   font-weight: 700;
+  font-size: 24px;
+  color: #6e6e6e;
+  padding: 11px 0 0px 15px;
 }
 
 .latest-and-blank {
@@ -132,11 +155,14 @@ h5 {
 .button {
   height: 40px;
   border-radius: 30px;
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0px 27px;
   background-color: #6e6e6e;
   border: 0;
   color: #ffffff;
-  margin: 10px;
+  margin: 30px 0px 0px 0px;
+  width: 136px;
 }
 
 /* .reset-button, */
@@ -155,8 +181,8 @@ h5 {
 
 #winner-card {
   border: 2px solid darkgrey;
-  margin: 10px;
-  width: 90%;
+  margin: 20px;
+  width: 88%;
   color: #6e6e6e;
 }
 
@@ -164,21 +190,26 @@ h5 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
+}
+
+#vs-names {
+  font-size: 19px;
+  margin: 11px 0;
+  font-weight: 700;
 }
 
 .vs {
   padding: 0px 20px;
-  margin: 8px 6px;
-  font-size: 19px;
+  margin: 6px 6px 0px 6px;
+  font-size: 1.1rem;
 }
 
-.grey-line {
+/* .grey-line {
   background-color: #D0D2D3;
   height: 1px;
   width: 85%;
   margin: 5px 0 5px 0;
-}
+} */
 
 .winner-card-middle-box {
   display: flex;
@@ -190,15 +221,15 @@ h5 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 90%;
+  width: 95%;
   border-top: 2px solid lightgrey;
   border-bottom: 2px solid lightgrey;
 }
 
 h3 {
-  margin: -5px;
+  margin: -6px;
   font-weight: 300;
-  font-size: 42px;
+  font-size: 2.3rem;
 }
 
 #winner-card-name {
@@ -209,19 +240,50 @@ h3 {
 .winner-card-bottom {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   padding: 0px 20px 0px 20px;
-  font-size: 22px;
+  font-size: 1.2rem;
 }
 
 .winner-card-stats {
   padding: 10px;
   font-weight: 700;
+  font-size: 1.15rem;
 }
 
-.lighter-h {
+.bottom-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#lighter-h {
   font-weight: 300;
+  font-size: 1.2rem;
+  margin-left: 0;
+  padding: 0;
+}
+
+/* -----
+SVG Icons - svgicons.sparkk.fr
+----- */
+
+.svg-icon {
+  width: 1em;
+  height: 1em;
+  margin: 0px 15px 0px 81px;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #4691f6;
+}
+
+.svg-icon circle {
+  stroke: #4691f6;
+  stroke-width: 1;
 }
 
 /* find svg image for the x button in the corner of the winner box */
