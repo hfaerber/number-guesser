@@ -106,19 +106,20 @@ function clearGameFields () {
 
 // Where parseint?
 function gameHint() {
-  if (guessOne.value < randomNum) {
-    highLowOne.innerText = "that's too low";
-  } else if (guessOne.value > randomNum){
+  if (parseInt(guessOne.value) === randomNum) {
+    highLowOne.innerText = "BOOM!";
+  } else if (parseInt(guessOne.value) > randomNum) {
     highLowOne.innerText = "that's too high";
-  } else {
-    highLowOne.innerText = "Boom!"
+  } else if (parseInt(guessOne.value) < randomNum) {
+    highLowOne.innerText = "that's too low";
   }
 
-  if (guessTwo.value < randomNum) {
-    highLowTwo.innertext = "that's too low";
-  } else if (guessTwo.value > randomNum) {
+
+  if (parseInt(guessTwo.value) === randomNum) {
+    highLowTwo.innertext = "BOOM!";
+  } else if (parseInt(guessTwo.value) > randomNum) {
     highLowTwo.innerText = "that's too high";
-  } else {
-    highLowTwo.innerText = "Boom!";
+  } else if (parseInt(guessTwo.value) < randomNum) {
+    highLowTwo.innerText = "that's too low";
   }
 }
