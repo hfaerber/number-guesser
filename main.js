@@ -8,6 +8,8 @@ var nameOne = document.querySelector("#name-one-input");
 var nameTwo = document.querySelector("#name-two-input");
 var guessOne = document.querySelector("#guess-one-input");
 var guessTwo = document.querySelector("#guess-two-input");
+var guessOneValue = "?";
+var guessTwoValue = "?";
 var submitGuessButton = document.querySelector("#submit-guess-button");
 var scoreCardNameOne = document.querySelectorAll(".score-card-name-one");
 var scoreCardNameTwo = document.querySelectorAll(".score-card-name-two");
@@ -61,9 +63,9 @@ function displayGameInfo(event){
   for(var i = 0; i < scoreCardNameTwo.length; i++){
     scoreCardNameTwo[i].innerText = nameTwo.value;
   }
-  var guessOneValue = guessOne.value;
+  guessOneValue = guessOne.value || "?";
   scoreCardGuessOne.innerText = guessOneValue;
-  var guessTwoValue = guessTwo.value;
+  guessTwoValue = guessTwo.value || "?";
   scoreCardGuessTwo.innerText = guessTwoValue;
   gameHint();
 };
