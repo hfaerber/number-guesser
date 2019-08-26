@@ -175,7 +175,7 @@ h5 {
   width: auto;
 }
 
-/* .reset-button, */
+.reset-button,
 .clear-button {
   background-color: #D0D2D3;
 }
@@ -213,13 +213,6 @@ h5 {
   margin: 6px 6px 0px 6px;
   font-size: 1.1rem;
 }
-
-/* .grey-line {
-  background-color: #D0D2D3;
-  height: 1px;
-  width: 85%;
-  margin: 5px 0 5px 0;
-} */
 
 .winner-card-middle-box {
   display: flex;

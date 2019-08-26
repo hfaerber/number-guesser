@@ -1,3 +1,4 @@
+// DECLARED VARIABLES
 var minRangeValue = document.querySelector("#min-range-input");
 var rangeStart = document.querySelector("#range-start");
 var maxRangeValue = document.querySelector("#max-range-input");
@@ -12,22 +13,29 @@ var scoreCardNameOne = document.querySelectorAll(".score-card-name-one");
 var scoreCardNameTwo = document.querySelectorAll(".score-card-name-two");
 var scoreCardGuessOne = document.querySelector(".challenger-one-guess");
 var scoreCardGuessTwo = document.querySelector(".challenger-two-guess");
-var inputFieldsArr = [guessOne, guessTwo];
+var inputGuessFieldsArr = [guessOne, guessTwo];
+var inputNameAndGuessFieldsArr = [nameOne, nameTwo, guessOne, guessTwo];
 var clearGameButton = document.querySelector(".clear-button");
 var resetGameButton = document.querySelector(".reset-button");
 var winnerCardName = document.querySelector("#winner-card-name");
 var randomNum;
 var highLowOne = document.querySelector(".high-low-one");
 var highLowTwo = document.querySelector(".high-low-two");
+
 // var min = parseInt(minRangeValue.value, 10);
 // var max = parseInt(maxRangeValue.value, 10);
 
-// add event listener to update button to fire get random interval <<would this
-// be a new eventListener on this button or would we simply invoke getRandomInt
-// within the setRange function?  I think the second option.
+// EVENT LISTENERS
 updateButton.addEventListener("click", setRange);
 submitGuessButton.addEventListener("click", displayGameInfo);
 
+for(var i = 0; i < inputGuessFieldsArr.length; i++) {
+  inputGuessFieldsArr[i].addEventListener("keydown", disableButton);
+}
+
+clearGameButton.addEventListener("click", clearGameFields);
+
+// FUNCTIONS
 function getRandomInt() {
   var minNum = Math.ceil(parseInt(minRangeValue.value, 10));
   var maxNum = Math.floor(parseInt(maxRangeValue.value, 10));
@@ -59,36 +67,24 @@ function displayGameInfo(event){
   scoreCardGuessTwo.innerText = guessTwoValue;
   gameHint();
 };
-// psuedocode for clear button functionality
-// set button to be disabled on page load <<done in html
-// Set up addEventListener listening for any typed input in any of the 4 fields THEN
-
-// first declare variable for the 4 fields (then think I need to add Event Bubbling or forloop)
-// fire function that changes CSS style to darkgrey
-// enables button
-
-
-
-for(var i = 0; i < inputFieldsArr.length; i++) {
-  inputFieldsArr[i].addEventListener("keydown", disableButton);
-}
 
 function disableButton () {
   clearGameButton.classList.remove("clear-button");
   clearGameButton.disabled = false;
-  // is this actually disabling?  or do i need to set disable = true on page load, then false w event?
 };
 
-clearGameButton.addEventListener("click", clearGameFields);
-
 function clearGameFields () {
-  for(var i = 0; i < inputFieldsArr.length; i++) {
-  inputFieldsArr[i].value = "";
+  for(var i = 0; i < inputGuessFieldsArr.length; i++) {
+  inputGuessFieldsArr[i].value = "";
 }
-// does this have to be another for loop? or can it reference the about for loop?
   clearGameButton.classList.add("clear-button");
   clearGameButton.disabled = true;
 };
+
+
+// changed inputFieldsArr name to inputGuessFieldsArr since it only pulls the 2 guess fields
+// add inputNameAndGuessFieldsArr for all 4 fields since reset will clear all 4
+// i added the reset-button class to the disabled look, need to create function w event listener to see if it works
 
 // Set up next addEventListener listening for click on button THEN
 //
@@ -126,3 +122,4 @@ function gameHint() {
     highlowTwo.innerText = "Boom!"
   }
 }
+
