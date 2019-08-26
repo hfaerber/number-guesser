@@ -28,12 +28,12 @@ var highLowTwo = document.querySelector(".high-low-two");
 // EVENT LISTENERS
 updateButton.addEventListener("click", setRange);
 submitGuessButton.addEventListener("click", displayGameInfo);
+resetGameButton.addEventListener("click", resetAndDisable);
+clearGameButton.addEventListener("click", clearGuessFields);
 
 for(var i = 0; i < inputGuessFieldsArr.length; i++) {
-  inputGuessFieldsArr[i].addEventListener("keydown", disableButton);
+  inputGuessFieldsArr[i].addEventListener("keydown", enableClear);
 }
-
-clearGameButton.addEventListener("click", clearGameFields);
 
 // FUNCTIONS
 function getRandomInt() {
@@ -66,36 +66,46 @@ function displayGameInfo(event){
   var guessTwoValue = guessTwo.value;
   scoreCardGuessTwo.innerText = guessTwoValue;
   gameHint();
+  enableReset();
 };
 
-function disableButton () {
+function enableClear() {
   clearGameButton.classList.remove("clear-button");
   clearGameButton.disabled = false;
 };
 
-function clearGameFields () {
-  for(var i = 0; i < inputGuessFieldsArr.length; i++) {
-  inputGuessFieldsArr[i].value = "";
-}
+function disableClear() {
   clearGameButton.classList.add("clear-button");
   clearGameButton.disabled = true;
 };
 
+function clearGuessFields() {
+  for(var i = 0; i < inputGuessFieldsArr.length; i++) {
+  inputGuessFieldsArr[i].value = "";
+  }
+  disableClear();
+};
 
-// changed inputFieldsArr name to inputGuessFieldsArr since it only pulls the 2 guess fields
-// add inputNameAndGuessFieldsArr for all 4 fields since reset will clear all 4
-// i added the reset-button class to the disabled look, need to create function w event listener to see if it works
+function enableReset() {
+  resetGameButton.classList.remove("reset-button");
+  resetGameButton.disabled = false;
+};
+// I think I could refactor funtions enableClear and disableReset to 1 w params
 
-// Set up next addEventListener listening for click on button THEN
-//
-// clear all 4 fields
-//
-// change CSS style back to light darkgrey
-//
-// disable button
-//
-// then should be listening for addEventListener #1 again for typed input
+function disableReset() {
+  resetGameButton.classList.add("reset-button");
+  resetGameButton.disabled = true;
+};
 
+function resetAndDisable () {
+  for(var i = 0; i < inputNameAndGuessFieldsArr.length; i++) {
+  inputNameAndGuessFieldsArr[i].value = "";
+  }
+  disableReset();
+  disableClear();
+  getRandomInt();
+  console.log(randomNum);
+  };
 
 // ERTY pseudocode for "thats too high/low" functionality
 // if var guess one.value is less than var randomnum
