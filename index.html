@@ -31,11 +31,15 @@
           <p>The Current Range is <span id="range-start">1</span> to <span id="range-end">100</span></p>
           <form action=" ">
             <h5>Challenger 1</h5>
-            <label>Name<input id="name-one-input" type="text" name="name-one"></label>
-            <label>Guess<input id="guess-one-input" type="number" name="guess-one"></label>
-            <h5>Challenger 2</h5>
-            <label>Name<input id="name-two-input" type="text" name="name-two"></label>
-            <label>Guess<input id="guess-two-input" type="number" name="guess-two"></label>
+              <div class="challengers-and-guesses">
+                <label>Name<input id="name-one-input" type="text" name="name-one"></label>
+                <label>Guess<input id="guess-one-input" type="number" name="guess-one"></label>
+              </div>
+              <h5>Challenger 2</h5>
+              <div class="challengers-and-guesses">
+                <label>Name<input id="name-two-input" type="text" name="name-two"></label>
+                <label>Guess<input id="guess-two-input" type="number" name="guess-two"></label>
+              </div>
             <div class="card-two-buttons">
               <input class="button" id="submit-guess-button" type="submit" name="submit" value="SUBMIT GUESS">
               <button class="button reset-button" type="button" name="reset" value="RESET GAME">RESET GAME</button>
