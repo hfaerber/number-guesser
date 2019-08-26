@@ -19,6 +19,9 @@ var clearGameButton = document.querySelector(".clear-button");
 var resetGameButton = document.querySelector(".reset-button");
 var winnerCardName = document.querySelector("#winner-card-name");
 var randomNum;
+var highLowOne = document.querySelector(".high-low-one");
+var highLowTwo = document.querySelector(".high-low-two");
+
 // var min = parseInt(minRangeValue.value, 10);
 // var max = parseInt(maxRangeValue.value, 10);
 
@@ -51,6 +54,7 @@ function setRange(event){
 }
 
 function displayGameInfo(event){
+  event.preventDefault();
   for(var i = 0; i < scoreCardNameOne.length; i++){
     scoreCardNameOne[i].innerText = nameOne.value;
     }
@@ -61,7 +65,7 @@ function displayGameInfo(event){
   scoreCardGuessOne.innerText = guessOneValue;
   var guessTwoValue = guessTwo.value;
   scoreCardGuessTwo.innerText = guessTwoValue;
-  event.preventDefault();
+  gameHint();
 };
 
 function disableButton () {
@@ -77,6 +81,45 @@ function clearGameFields () {
   clearGameButton.disabled = true;
 };
 
+
 // changed inputFieldsArr name to inputGuessFieldsArr since it only pulls the 2 guess fields
 // add inputNameAndGuessFieldsArr for all 4 fields since reset will clear all 4
 // i added the reset-button class to the disabled look, need to create function w event listener to see if it works
+
+// Set up next addEventListener listening for click on button THEN
+//
+// clear all 4 fields
+//
+// change CSS style back to light darkgrey
+//
+// disable button
+//
+// then should be listening for addEventListener #1 again for typed input
+
+
+// ERTY pseudocode for "thats too high/low" functionality
+// if var guess one.value is less than var randomnum
+// .innertext the guess one span (needs class or id to target)
+// else if var guessone is greater than var randomnum
+// .innertext the guess one span
+// how do we apply two values to two innertext changes using one conditional/function?
+
+// Where parseint?
+function gameHint() {
+  if (guessOne.value < randomNum) {
+    highLowOne.innerText = "that's too low";
+  } else if (guessOne.value > randomNum){
+    highLowOne.innerText = "that's too high";
+  } else {
+    highLowOne.innerText = "Boom!"
+  }
+
+  if (guessTwo.value < randomNum) {
+    highLowTwo.innertext = "that's too low";
+  } else if (guessTwo.value > randomNum) {
+    highLowTwo.innerText = "that's too high";
+  } else {
+    highlowTwo.innerText = "Boom!"
+  }
+}
+
