@@ -154,8 +154,8 @@ h5 {
 .challenger-two-guess {
   font-weight: 700;
   color: #DD1972;
-  font-size: 50px;
-  margin -1px 0 0;
+  font-size: 100px;
+  margin: -10px 0 0;
 }
 
 .guess {
