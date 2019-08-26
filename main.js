@@ -16,6 +16,7 @@ var inputFieldsArr = [guessOne, guessTwo];
 var clearGameButton = document.querySelector(".clear-button");
 var resetGameButton = document.querySelector(".reset-button");
 var winnerCardName = document.querySelector("#winner-card-name");
+var randonNum;
 // var min = parseInt(minRangeValue.value, 10);
 // var max = parseInt(maxRangeValue.value, 10);
 
@@ -28,18 +29,18 @@ submitGuessButton.addEventListener("click", displayGameInfo);
 function getRandomInt() {
   var minNum = Math.ceil(parseInt(minRangeValue.value, 10));
   var maxNum = Math.floor(parseInt(maxRangeValue.value, 10));
-  // storedRandomNum creating a new variable that will be global due to lack of javascript
-  storedRandomNum =  Math.floor(Math.random() * (maxNum-minNum)) + minNum;
+  // randomNum creating a new variable that will be global due to lack of javascript
+  randomNum =  Math.floor(Math.random() * (maxNum-minNum)) + minNum;
 }
 
 function setRange(event){
+  event.preventDefault();
   console.log(minRangeValue.value);
   console.log(maxRangeValue.value);
   rangeStart.innerHTML = minRangeValue.value;
   rangeEnd.innerHTML = maxRangeValue.value;
   getRandomInt();
-  console.log(storedRandomNum);
-  event.preventDefault();
+  console.log(randomNum);
 }
 
 function displayGameInfo(event){
