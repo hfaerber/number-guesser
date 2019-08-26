@@ -97,14 +97,6 @@ function clearGameFields () {
 // then should be listening for addEventListener #1 again for typed input
 
 
-// ERTY pseudocode for "thats too high/low" functionality
-// if var guess one.value is less than var randomnum
-// .innertext the guess one span (needs class or id to target)
-// else if var guessone is greater than var randomnum
-// .innertext the guess one span
-// how do we apply two values to two innertext changes using one conditional/function?
-
-// Where parseint?
 function gameHint() {
   if (parseInt(guessOne.value) === randomNum) {
     highLowOne.innerText = "BOOM!";
@@ -112,14 +104,17 @@ function gameHint() {
     highLowOne.innerText = "that's too high";
   } else if (parseInt(guessOne.value) < randomNum) {
     highLowOne.innerText = "that's too low";
+  } else {
+    highLowOne.innerText = "no guess submitted";
   }
 
-
   if (parseInt(guessTwo.value) === randomNum) {
-    highLowTwo.innertext = "BOOM!";
+    highLowTwo.innerText = "BOOM!";
   } else if (parseInt(guessTwo.value) > randomNum) {
     highLowTwo.innerText = "that's too high";
   } else if (parseInt(guessTwo.value) < randomNum) {
     highLowTwo.innerText = "that's too low";
+  } else {
+    highLowTwo.innerText = "no guess submitted";
   }
 }
