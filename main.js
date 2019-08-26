@@ -119,7 +119,6 @@ function gameHint() {
   } else if (guessTwo.value > randomNum) {
     highLowTwo.innerText = "that's too high";
   } else {
-    highlowTwo.innerText = "Boom!"
+    highLowTwo.innerText = "Boom!";
   }
 }
-
