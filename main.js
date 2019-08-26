@@ -2,7 +2,7 @@ var minRangeValue = document.querySelector("#min-range-input");
 var rangeStart = document.querySelector("#range-start");
 var maxRangeValue = document.querySelector("#max-range-input");
 var rangeEnd = document.querySelector("#range-end");
-var submitRangeButton = document.querySelector("#submit-range-button");
+var updateButton = document.querySelector("#submit-range-button");
 var nameOne = document.querySelector("#name-one-input");
 var nameTwo = document.querySelector("#name-two-input");
 var guessOne = document.querySelector("#guess-one-input");
@@ -12,14 +12,17 @@ var scoreCardNameOne = document.querySelectorAll(".score-card-name-one");
 var scoreCardNameTwo = document.querySelectorAll(".score-card-name-two");
 var scoreCardGuessOne = document.querySelector(".challenger-one-guess");
 var scoreCardGuessTwo = document.querySelector(".challenger-two-guess");
-var inputFieldsArr = [nameOne, nameTwo, guessOne, guessTwo];
+var inputFieldsArr = [guessOne, guessTwo];
 var clearGameButton = document.querySelector(".clear-button");
+var resetGameButton = document.querySelector(".reset-button");
+var winnerCardName = document.querySelector("#winner-card-name");
 // var min = parseInt(minRangeValue.value, 10);
 // var max = parseInt(maxRangeValue.value, 10);
 
-// add event listener to update button to fire get random interval
-// change name of submit range button to update range button
-submitRangeButton.addEventListener("click", setRange);
+// add event listener to update button to fire get random interval <<would this
+// be a new eventListener on this button or would we simply invoke getRandomInt
+// within the setRange function?  I think the second option.
+updateButton.addEventListener("click", setRange);
 submitGuessButton.addEventListener("click", displayGameInfo);
 
 function getRandomInt() {
@@ -34,6 +37,8 @@ function setRange(event){
   console.log(maxRangeValue.value);
   rangeStart.innerHTML = minRangeValue.value;
   rangeEnd.innerHTML = maxRangeValue.value;
+  getRandomInt();
+  console.log(storedRandomNum);
   event.preventDefault();
 }
 
