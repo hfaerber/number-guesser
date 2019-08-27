@@ -290,25 +290,13 @@ h3 {
   padding: 0;
 }
 
-/* -----
-SVG Icons - svgicons.sparkk.fr
------ */
-
-.svg-icon {
-  width: 1em;
-  height: 1em;
-  margin: 0px 15px 0px 81px;
+.x-button {
+  background-color: #6E6E6E;
+  color: lightgrey;
+  border: 0;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  line-height: 15px;
 }
-
-.svg-icon path,
-.svg-icon polygon,
-.svg-icon rect {
-  fill: #4691f6;
-}
-
-.svg-icon circle {
-  stroke: #4691f6;
-  stroke-width: 1;
-}
-
-/* find svg image for the x button in the corner of the winner box */
