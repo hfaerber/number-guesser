@@ -115,6 +115,12 @@ input {
   font-size: 20px;
 }
 
+input:not([type=submit]):hover,
+input:not([type=submit]):focus {
+  border: 2px solid #DD1972;
+  outline: #DD1972;
+}
+
 label {
   display: flex;
   flex-direction: column;
@@ -167,7 +173,7 @@ h5 {
 .challenger-one-guess,
 .challenger-two-guess {
   font-weight: 700;
-  color: #DD1972;
+  color: #F74D9B;
   font-size: 100px;
   margin: -10px 0 0;
 }
@@ -195,12 +201,27 @@ h5 {
   color: #ffffff;
   margin: 30px 0px 10px 0px;
   width: auto;
+  cursor: pointer;
+  outline: 0;
+}
+
+.button:hover,
+.button:focus,
+.x-button:hover,
+.x-button:focus {
+  background-color: #DD1972;
+  outline: 0;
 }
 
 .reset-button,
-.clear-button {
+.clear-button,
+.reset-button:hover,
+.clear-button:hover {
   background-color: #D0D2D3;
+  cursor: not-allowed;
 }
+
+
 
 .right-column {
   width: 50%;
@@ -295,8 +316,12 @@ h3 {
   color: lightgrey;
   border: 0;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  font-size: 16px;
+  width: 30px;
+  height: 30px;
+  font-size: 27px;
+  font-weight: 300;
+  padding: 0px 0px 4px 0px;
   line-height: 15px;
+  cursor: pointer;
+  outline: 0;
 }
