@@ -399,6 +399,16 @@ h3 {
 }
 
 @media screen and (max-width: 800px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
+
   .winner-card-top{
     flex-direction: column;
   }
@@ -419,7 +429,6 @@ h3 {
     width: 90%;
   }
 
-  }
 }
 
 @media screen and (max-width: 550px) {
