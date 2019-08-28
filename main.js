@@ -3,6 +3,7 @@ var minRangeValue = document.querySelector('#min-range-input');
 var rangeStart = document.querySelector('#range-start');
 var maxRangeValue = document.querySelector('#max-range-input');
 var rangeEnd = document.querySelector('#range-end');
+var rangeInputBox = document.querySelector('.range-input-box');
 var updateButton = document.querySelector('#submit-range-button');
 var nameOne = document.querySelector('#name-one-input');
 var nameTwo = document.querySelector('#name-two-input');
@@ -49,6 +50,7 @@ function getRandomInt() {
 
 function setRange(event){
   event.preventDefault();
+  errorCheckRange();
   console.log(minRangeValue.value);
   console.log(maxRangeValue.value);
   rangeStart.innerHTML = minRangeValue.value;
@@ -134,13 +136,22 @@ function gameHint() {
 };
 
 function errorCheckRange() {
-  if (parseInt(minRangeValue.value) > parseInt(maxRangeValue.value) ||
-    parseInt(maxRangeValue.value) < parseInt(minRangeValue.value)) {
-      // trigger error on update button
-      // unhide the error message that was hidden under the ranges
+  if (parseInt(minRangeValue.value) > parseInt(maxRangeValue.value)) {
+    var errorMsg = showErrorMsg()
+    rangeInputBox.appendChild(errorMsg);
+
     }
 }
 
+function showErrorMsg() {
+  var errorP = document.createElement("p");
+  errorP.setAttribute('class', 'error-message')
+  errorP.innerText = "ERROR";
+  return errorP;
+}
+
+// trigger error on update button
+// unhide the error message that was hidden under the ranges
 // function errorCheckGuess() {
 //   if (parseInt(.value)
 // )
