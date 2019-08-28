@@ -34,20 +34,21 @@ h1 {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 54%;
+  width: 100%;
 }
 
 .white-subheader {
   color: #ffffff;
   font-weight: 300;
   font-size: 27px;
+  text-align: center;
 }
 
 .white-line {
   margin: 0px 15px;
   background-color: #ffffff;
   height: 1px;
-  width: 16%;
+  width: 8.8%;
 }
 
 main {
@@ -250,8 +251,6 @@ h5 {
   cursor: not-allowed;
 }
 
-
-
 .right-column {
   width: 50%;
   display: flex;
@@ -272,12 +271,20 @@ h5 {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.winner-card-top-span {
+  width: 45%;
+  text-align: center;
 }
 
 .vs-names {
   font-size: 19px;
   margin: 11px 0;
   font-weight: 700;
+  padding: 0;
 }
 
 .vs {
@@ -310,6 +317,7 @@ h3 {
 .winner-card-name {
   font-weight: 700;
   padding-bottom: 3px;
+  text-align: center;
 }
 
 .winner-card-bottom {
@@ -353,6 +361,35 @@ h3 {
   line-height: 15px;
   cursor: pointer;
   outline: 0;
+}
+
+@media screen and (max-width: 1250px) {
+
+  .card-two-buttons {
+    flex-direction: column;
+  }
+
+  .button {
+    margin: 10px 5px;
+  }
+
+  .name-label {
+    margin: 0px 0px 5px;
+  }
+
+  .range-input-box {
+    flex-direction: column;
+  }
+
+  .range-label {
+    width: 100%;
+  }
+
+  .min-range,
+  .max-range {
+    width: 100%;
+  }
+
 }
 
 @media screen and (max-width: 450px) {
