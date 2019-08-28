@@ -354,7 +354,7 @@ h3 {
   align-items: center;
 }
 
-#lighter-h {
+.lighter-h {
   font-weight: 300;
   font-size: 1.2rem;
   margin-left: 0;
