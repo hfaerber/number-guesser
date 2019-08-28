@@ -18,6 +18,10 @@
 
 #### Our project Screenshots
 
+![our project main screenshot](filesystem:chrome-extension://fdpohaocaechififmbbbbbknoalclacl/persistent/screencapture-hfaerber-github-io-number-guesser-2019-08-27-15_25_52.png)
+
+![our project in action screenshot](chrome-extension://fdpohaocaechififmbbbbbknoalclacl/capture.html?id=6&url=https%3A%2F%2Fhfaerber.github.io%2Fnumber-guesser%2F)
+
 #### How to play
 1. Set a range of numbers for a random number to be generated between.
 2. Input both player names and each player's guess.
