@@ -132,3 +132,16 @@ function gameHint() {
     highLowTwo.innerText = 'no guess submitted';
   }
 };
+
+function errorCheckRange() {
+  if (parseInt(minRangeValue.value) > parseInt(maxRangeValue.value) ||
+    parseInt(maxRangeValue.value) < parseInt(minRangeValue.value)) {
+      // trigger error on update button
+      // unhide the error message that was hidden under the ranges
+    }
+}
+
+// function errorCheckGuess() {
+//   if (parseInt(.value)
+// )
+// }
