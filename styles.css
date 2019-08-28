@@ -265,6 +265,7 @@ h5 {
   margin: 20px;
   width: 88%;
   color: #6e6e6e;
+  display: none;
 }
 
 .winner-card-top {
@@ -373,6 +374,11 @@ h3 {
     margin: 10px 5px;
   }
 
+  .update-button {
+    width: 30%;
+    text-align: center;
+  }
+
   .name-label {
     margin: 0px 0px 5px;
   }
@@ -392,7 +398,31 @@ h3 {
 
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 800px) {
+  .winner-card-top{
+    flex-direction: column;
+  }
+
+  .winner-card-top-span {
+    width: 100%;
+  }
+
+  .vs-names {
+    margin: 0;
+  }
+
+  .winner-card-name {
+    width: 100%;
+  }
+
+  .winner-card-middle-text-box {
+    width: 90%;
+  }
+
+  }
+}
+
+@media screen and (max-width: 550px) {
   main {
     display: flex;
     flex-direction: column;
