@@ -89,7 +89,7 @@ main {
 .range-input {
   display: flex;
   justify-content: space-between;
-  padding: 0px 15px 25px 15px;
+  padding: 0px 15px 0px 15px;
 }
 
 #range-start,
@@ -369,10 +369,9 @@ h3 {
   }
   .range-input {
     flex-direction: column;
-  }
-  .range-input {
     width: 100%;
   }
+
   .challengers-and-guesses {
     flex-direction: column;
   }
