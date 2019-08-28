@@ -107,9 +107,6 @@ p {
   margin: 0px 16px;
 }
 
-.name-input {
-  width: 60%;
-}
 
 input {
   width: 190px;
@@ -131,6 +128,22 @@ label {
   font-weight: 300;
   font-size: 20px;
   color: #6e6e6e;
+}
+
+.name-label {
+  width: 65%;
+}
+
+.guess-label {
+  width: 32%;
+}
+
+.guess-input {
+  width: 100%;
+}
+
+.name-input {
+  width: 100%;
 }
 
 h5 {
@@ -364,4 +377,22 @@ h3 {
   input {
     width: 100%;
   }
+
+  .name-label {
+    width: 100%;
+  }
+
+  .guess-label {
+    width: 100%;
+  }
+
+  .card-two-buttons {
+    flex-direction: column;
+    padding: 5%;
+  }
+
+  .button {
+    margin: 10px 0px;
+  }
+
 }
