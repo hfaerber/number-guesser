@@ -69,11 +69,6 @@ main {
   width: 90%;
 }
 
-.error-message {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
 .game-box {
   display: flex;
   flex-direction: column;
@@ -94,12 +89,27 @@ main {
 .range-input-box {
   display: flex;
   justify-content: space-between;
-  padding: 0px 15px 20px 15px;
-  position: relative;
+  padding: 0px 15px 0px 15px;
 }
 
 .range-label {
   width: 38%;
+}
+
+.error-message {
+  color: #DD1972;
+  margin: 0px 0px 0px 15px;
+  width: 36%
+}
+
+.error-placeholder {
+  height: 28px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.error-icon {
+  width: 17px;
 }
 
 #range-start,
@@ -111,6 +121,7 @@ main {
 p {
   font-size: 20px;
   margin: 10px 0px 10px 15px;
+  color: #6e6e6e;
 }
 
 .challengers-and-guesses {
@@ -177,6 +188,7 @@ h5 {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
+  padding-bottom: 15px;
 }
 
 .current-guess-boxes {
@@ -228,7 +240,7 @@ h5 {
   background-color: #6e6e6e;
   border: 0;
   color: #ffffff;
-  margin: 30px 0px 10px 0px;
+  margin: 30px 0px 0px 0px;
   width: auto;
   cursor: pointer;
   outline: 0;
