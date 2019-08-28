@@ -107,9 +107,8 @@ p {
   margin: 0px 16px;
 }
 
-#name-one-input,
-#name-two-input {
-  width: 438px;
+.name-input {
+  width: 60%;
 }
 
 input {
@@ -331,4 +330,38 @@ h3 {
   outline: 0;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (max-width: 450px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
+  .subheader-box {
+    width: 100%;
+  }
+  .white-line {
+    width: 13%;
+  }
+  h1 {
+    font-size: 43px;
+  }
+  .white-subheader {
+    font-size: 16px;
+  }
+  .range-input {
+    flex-direction: column;
+  }
+  .range-input {
+    width: 100%;
+  }
+  .challengers-and-guesses {
+    flex-direction: column;
+  }
+  input {
+    width: 100%;
+  }
+}
