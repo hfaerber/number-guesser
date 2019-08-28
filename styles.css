@@ -99,10 +99,17 @@ main {
 .error-message {
   color: #DD1972;
   margin: 0px 0px 0px 15px;
+  width: 36%
+}
+
+.error-placeholder {
+  height: 28px;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .error-icon {
-  width: 3%;
+  width: 17px;
 }
 
 #range-start,

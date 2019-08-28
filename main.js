@@ -24,6 +24,9 @@ var winnerCardName = document.querySelector('#winner-card-name');
 var randomNum;
 var highLowOne = document.querySelector('.high-low-one');
 var highLowTwo = document.querySelector('.high-low-two');
+var errorArr = document.querySelectorAll('.error-message');
+var errorMin = errorArr[0];
+var errorMax = errorArr[1];
 
 // EVENT LISTENERS
 updateButton.addEventListener('click', setRange);
@@ -136,17 +139,20 @@ function gameHint() {
   }
 };
 
-// function errorCheckRange() {
-//   if (parseInt(minRangeValue.value) > parseInt(maxRangeValue.value)) {
-      // var errorMsg = createErrorMsg()
-//     rangeInputBox.appendChild(errorMsg);
-//     }
-
-//   if (parseInt(minRangeValue.value) < parseInt(maxRangeValue.value) &&
-// rangeInputBox.contains('.error-message')) {
-//       rangeInputBox.removeChild(errorMsg);
-//     }
-// };
+function errorCheckRange() {
+  if (parseInt(minRangeValue.value) > parseInt(maxRangeValue.value)) {
+    errorMin.hidden = false;
+  }
+  if (parseInt(minRangeValue.value) < parseInt(maxRangeValue.value)) {
+    errorMin.hidden = true;
+  }
+  // if (parseInt(maxRangeValue.value) > parseInt(minRangeValue.value)) {
+  //   errorMax.hidden = false;
+  // }
+  // if (parseInt(minRangeValue.value) < parseInt(maxRangeValue.value)) {
+  //   errorMax.hidden = true;
+  // }
+};
 
 // function createErrorMsg() {
 //   var errorP = document.createElement("p");
