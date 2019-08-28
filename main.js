@@ -24,6 +24,7 @@ var winnerCardName = document.querySelector('#winner-card-name');
 var randomNum;
 var highLowOne = document.querySelector('.high-low-one');
 var highLowTwo = document.querySelector('.high-low-two');
+var errorMsg = createErrorMsg()
 
 // EVENT LISTENERS
 updateButton.addEventListener('click', setRange);
@@ -137,16 +138,18 @@ function gameHint() {
 
 function errorCheckRange() {
   if (parseInt(minRangeValue.value) > parseInt(maxRangeValue.value)) {
-    var errorMsg = showErrorMsg()
+    // var errorMsg = createErrorMsg()
     rangeInputBox.appendChild(errorMsg);
-
     }
+  if (parseInt(minRangeValue.value) < parseInt(maxRangeValue.value)) {
+    rangeInputBox.removeChild(errorMsg);
+  }
 }
 
-function showErrorMsg() {
+function createErrorMsg() {
   var errorP = document.createElement("p");
   errorP.setAttribute('class', 'error-message')
-  errorP.innerText = "ERROR";
+  errorP.innerText = "Invalid Entry";
   return errorP;
 }
 
