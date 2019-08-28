@@ -18,9 +18,11 @@
 
 #### Our project Screenshots
 
-![our project main screenshot](filesystem:chrome-extension://fdpohaocaechififmbbbbbknoalclacl/persistent/screencapture-hfaerber-github-io-number-guesser-2019-08-27-15_25_52.png)
+<img src="assets/our-project-screenshot-main.jpeg.png" alt="our project screenshot main"/>
 
-![our project in action screenshot](chrome-extension://fdpohaocaechififmbbbbbknoalclacl/capture.html?id=6&url=https%3A%2F%2Fhfaerber.github.io%2Fnumber-guesser%2F)
+<img src="assets/our-project-in-action.png" alt="our project in action"/>
+
+<img src="assets/our-project-mobile-layout.png" alt="our project mobile layout screenshot"/>
 
 #### How to play
 1. Set a range of numbers for a random number to be generated between.
