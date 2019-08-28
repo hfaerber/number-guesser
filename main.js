@@ -1,8 +1,8 @@
 // DECLARED VARIABLES
 var minRangeValue = document.querySelector('#min-range-input');
-var rangeStart = document.querySelector('#range-start');
+var rangeStart = document.querySelector('.range-start');
 var maxRangeValue = document.querySelector('#max-range-input');
-var rangeEnd = document.querySelector('#range-end');
+var rangeEnd = document.querySelector('.range-end');
 var rangeInputBox = document.querySelector('.range-input-box');
 var updateButton = document.querySelector('#submit-range-button');
 var nameOne = document.querySelector('#name-one-input');
@@ -29,19 +29,19 @@ var errorMin = errorArr[0];
 var errorMax = errorArr[1];
 
 // EVENT LISTENERS
-updateButton.addEventListener('click', setRange);
-submitGuessButton.addEventListener('click', displayGameInfo);
-resetGameButton.addEventListener('click', resetAndDisable);
-clearGameButton.addEventListener('click', clearGuessFields);
 window.onload = function() {
   getRandomInt();
   console.log(randomNum);
 };
 
+updateButton.addEventListener('click', setRange);
+submitGuessButton.addEventListener('click', displayGameInfo);
+resetGameButton.addEventListener('click', resetAndDisable);
+clearGameButton.addEventListener('click', clearGuessFields);
+
 for(var i = 0; i < inputGuessFieldsArr.length; i++) {
   inputGuessFieldsArr[i].addEventListener('keydown', enableClear);
 }
-// confirm the structure of this. it works but is it ok to have a for loop hanging out?
 
 // FUNCTIONS
 function getRandomInt() {

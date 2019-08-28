@@ -1,5 +1,4 @@
 * {
-  /* border: 1px solid blue; */
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -113,8 +112,8 @@ main {
   width: 17px;
 }
 
-#range-start,
-#range-end {
+.range-start,
+.range-end {
   text-decoration: underline;
   font-weight: 700;
 }
@@ -171,7 +170,6 @@ label {
 }
 
 h5 {
-  /* margin: 11px 0 11px 18px; */
   font-weight: 700;
   font-size: 24px;
   color: #6e6e6e;
@@ -217,7 +215,7 @@ h5 {
   font-weight: 700;
   color: #F74D9B;
   font-size: 100px;
-  margin: -10px 0 0;
+  margin: -10px 0 0 0;
 }
 
 .high-low-one,
@@ -411,6 +409,7 @@ h3 {
 }
 
 @media screen and (max-width: 800px) {
+
   main {
     display: flex;
     flex-direction: column;
@@ -444,6 +443,7 @@ h3 {
 }
 
 @media screen and (max-width: 550px) {
+
   main {
     display: flex;
     flex-direction: column;
@@ -453,18 +453,23 @@ h3 {
   .right-column {
     width: 100%;
   }
+
   .subheader-box {
     width: 100%;
   }
+
   .white-line {
     width: 13%;
   }
+
   h1 {
     font-size: 43px;
   }
+
   .white-subheader {
     font-size: 16px;
   }
+
   .range-input {
     flex-direction: column;
     width: 100%;
@@ -473,6 +478,7 @@ h3 {
   .challengers-and-guesses {
     flex-direction: column;
   }
+
   input {
     width: 100%;
   }
@@ -553,4 +559,5 @@ h3 {
   .winner-card-bottom {
     padding: 0px 15px 10px 15px;
   }
+
 }
