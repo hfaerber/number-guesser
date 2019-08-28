@@ -69,6 +69,11 @@ main {
   width: 240px;
 }
 
+.error-message {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
 .game-box {
   display: flex;
   flex-direction: column;
@@ -86,10 +91,11 @@ main {
   border: 2px solid lightgrey;
 }
 
-.range-input {
+.range-input-box {
   display: flex;
   justify-content: space-between;
-  padding: 0px 15px 25px 15px;
+  padding: 0px 15px 20px 15px;
+  position: relative;
 }
 
 #range-start,
@@ -369,10 +375,9 @@ h3 {
   }
   .range-input {
     flex-direction: column;
-  }
-  .range-input {
     width: 100%;
   }
+
   .challengers-and-guesses {
     flex-direction: column;
   }
