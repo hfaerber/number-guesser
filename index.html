@@ -5,6 +5,7 @@
     <title>Number Guesser</title>
     <link href="styles.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <header>
@@ -21,8 +22,8 @@
           <form action=" ">
             <h5>Set Range</h5>
             <div class="range-input">
-              <label>Min Range<input class="min-range"id="min-range-input" type="number" name="min-range"></label>
-              <label>Max Range<input class="max-range" id="max-range-input" type="number" name="max-range"></label>
+              <label>Min Range<input class="min-range range-input"id="min-range-input" type="number" name="min-range"></label>
+              <label>Max Range<input class="max-range range-input" id="max-range-input" type="number" name="max-range"></label>
               <input class="button" id= "submit-range-button" type="submit" name="UPDATE" value="UPDATE">
             </div>
           </form>
@@ -32,13 +33,13 @@
           <form action=" ">
             <h5>Challenger 1</h5>
               <div class="challengers-and-guesses">
-                <label>Name<input id="name-one-input" type="text" name="name-one"></label>
-                <label>Guess<input id="guess-one-input" type="number" name="guess-one"></label>
+                <label class="name-label">Name<input class="name-input" id="name-one-input" type="text" name="name-one"></label>
+                <label class="guess-label">Guess<input class="guess-input" id="guess-one-input" type="number" name="guess-one"></label>
               </div>
               <h5>Challenger 2</h5>
               <div class="challengers-and-guesses">
-                <label>Name<input id="name-two-input" type="text" name="name-two"></label>
-                <label>Guess<input id="guess-two-input" type="number" name="guess-two"></label>
+                <label class="name-label">Name<input class="name-input" id="name-two-input" type="text" name="name-two"></label>
+                <label class="guess-label">Guess<input class="guess-input" id="guess-two-input" type="number" name="guess-two"></label>
               </div>
             <div class="card-two-buttons">
               <input class="button" id="submit-guess-button" type="submit" name="submit" value="SUBMIT GUESS">

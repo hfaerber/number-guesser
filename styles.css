@@ -107,10 +107,6 @@ p {
   margin: 0px 16px;
 }
 
-#name-one-input,
-#name-two-input {
-  width: 438px;
-}
 
 input {
   width: 190px;
@@ -132,6 +128,22 @@ label {
   font-weight: 300;
   font-size: 20px;
   color: #6e6e6e;
+}
+
+.name-label {
+  width: 65%;
+}
+
+.guess-label {
+  width: 32%;
+}
+
+.guess-input {
+  width: 100%;
+}
+
+.name-input {
+  width: 100%;
 }
 
 h5 {
@@ -329,4 +341,58 @@ h3 {
   line-height: 15px;
   cursor: pointer;
   outline: 0;
+}
+
+@media screen and (max-width: 450px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
+  .subheader-box {
+    width: 100%;
+  }
+  .white-line {
+    width: 13%;
+  }
+  h1 {
+    font-size: 43px;
+  }
+  .white-subheader {
+    font-size: 16px;
+  }
+  .range-input {
+    flex-direction: column;
+  }
+  .range-input {
+    width: 100%;
+  }
+  .challengers-and-guesses {
+    flex-direction: column;
+  }
+  input {
+    width: 100%;
+  }
+
+  .name-label {
+    width: 100%;
+  }
+
+  .guess-label {
+    width: 100%;
+  }
+
+  .card-two-buttons {
+    flex-direction: column;
+    padding: 5%;
+  }
+
+  .button {
+    margin: 10px 0px;
+  }
+
 }
