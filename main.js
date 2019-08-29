@@ -26,7 +26,10 @@ var highLowOne = document.querySelector('.high-low-one');
 var highLowTwo = document.querySelector('.high-low-two');
 var errorArr = document.querySelectorAll('.error-message');
 var errorMin = errorArr[0];
-var errorMax = errorArr[1];
+var errorG1 = errorArr[1];
+// var errorN1 = errorArr[2];
+var errorG2 = errorArr[3];
+// var errorN2 = errorArr[4];
 
 // EVENT LISTENERS
 window.onload = function() {
@@ -38,6 +41,8 @@ updateButton.addEventListener('click', setRange);
 submitGuessButton.addEventListener('click', displayGameInfo);
 resetGameButton.addEventListener('click', resetAndDisable);
 clearGameButton.addEventListener('click', clearGuessFields);
+guessOne.addEventListener('mouseout', errorCheckGuessOne);
+guessTwo.addEventListener('mouseout', errorCheckGuessTwo);
 
 for(var i = 0; i < inputGuessFieldsArr.length; i++) {
   inputGuessFieldsArr[i].addEventListener('keydown', enableClear);
@@ -47,36 +52,36 @@ for(var i = 0; i < inputGuessFieldsArr.length; i++) {
 function getRandomInt() {
   var minNum = Math.ceil(parseInt(minRangeValue.value, 10) || 1);
   var maxNum = Math.floor(parseInt(maxRangeValue.value, 10) || 100);
-  // randomNum creating a new variable that will be global due to lack of javascript
   randomNum =  Math.floor(Math.random() * (maxNum-minNum)) + minNum;
 };
 
-function setRange(event){
+function setRange(event) {
   event.preventDefault();
   errorCheckRange();
-  console.log(minRangeValue.value);
-  console.log(maxRangeValue.value);
   rangeStart.innerHTML = minRangeValue.value;
   rangeEnd.innerHTML = maxRangeValue.value;
   getRandomInt();
-  console.log(randomNum);
-
+  // console.log(randomNum);
 };
 
-function displayGameInfo(event){
+function displayGameInfo(event) {
   event.preventDefault();
-  for(var i = 0; i < scoreCardNameOne.length; i++){
-    scoreCardNameOne[i].innerText = nameOne.value;
-    }
-  for(var i = 0; i < scoreCardNameTwo.length; i++){
-    scoreCardNameTwo[i].innerText = nameTwo.value;
-  }
+  updateNames();
   guessOneValue = guessOne.value || '?';
   scoreCardGuessOne.innerText = guessOneValue;
   guessTwoValue = guessTwo.value || '?';
   scoreCardGuessTwo.innerText = guessTwoValue;
   gameHint();
   enableReset();
+};
+
+function updateNames() {
+  for(var i = 0; i < scoreCardNameOne.length; i++){
+    scoreCardNameOne[i].innerText = nameOne.value;
+    }
+  for(var i = 0; i < scoreCardNameTwo.length; i++){
+    scoreCardNameTwo[i].innerText = nameTwo.value;
+  }
 };
 
 function enableClear() {
@@ -100,7 +105,6 @@ function enableReset() {
   resetGameButton.classList.remove('reset-button');
   resetGameButton.disabled = false;
 };
-// I think I could refactor funtions enableClear and disableReset to 1 w params
 
 function disableReset() {
   resetGameButton.classList.add('reset-button');
@@ -146,17 +150,22 @@ function errorCheckRange() {
   if (parseInt(minRangeValue.value) < parseInt(maxRangeValue.value)) {
     errorMin.hidden = true;
   }
-  // if (parseInt(maxRangeValue.value) > parseInt(minRangeValue.value)) {
-  //   errorMax.hidden = false;
-  // }
-  // if (parseInt(minRangeValue.value) < parseInt(maxRangeValue.value)) {
-  //   errorMax.hidden = true;
-  // }
 };
 
-// function createErrorMsg() {
-//   var errorP = document.createElement("p");
-//   errorP.setAttribute('class', 'error-message')
-//   errorP.innerText = "Invalid Entry";
-//   return errorP;
-// }
+function errorCheckGuessOne() {
+  if (parseInt(guessOne.value) < parseInt(minRangeValue.value) ||
+    parseInt(guessOne.value) > parseInt(maxRangeValue.value)) {
+    errorG1.hidden = false;
+  } else {
+    errorG1.hidden = true;
+  }
+};
+
+function errorCheckGuessTwo() {
+  if (parseInt(guessTwo.value) < parseInt(minRangeValue.value) ||
+    parseInt(guessTwo.value) > parseInt(maxRangeValue.value)) {
+    errorG2.hidden = false;
+  } else {
+    errorG2.hidden = true;
+  }
+};

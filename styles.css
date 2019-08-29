@@ -99,13 +99,18 @@ main {
 .error-message {
   color: #DD1972;
   margin: 0px 0px 0px 15px;
-  width: 36%
+  width: 100%;
 }
 
 .error-placeholder {
   height: 28px;
   display: flex;
   justify-content: flex-start;
+}
+
+.guess-error {
+  text-align: right;
+  margin-left: -26px;
 }
 
 .error-icon {
