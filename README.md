@@ -30,3 +30,7 @@
 3. Submit the guesses to see if you've guessed the random number.
 4. Continue to clear the fields and submit guesses until someone guesses the random number.
 5. Reset game to play again.
+
+#### Click Link Below to Play Now!
+
+https://hfaerber.github.io/number-guesser/
