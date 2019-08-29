@@ -4,7 +4,10 @@
     <meta charset="utf-8">
     <title>Number Guesser</title>
     <link href="styles.css" type="text/css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700&display=swap" rel="stylesheet">
+    <link
+      href=
+        "https://fonts.googleapis.com/css?family=Open+Sans:300,700&display=swap" 
+      rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
@@ -22,33 +25,67 @@
           <form action=" ">
             <h5>Set Range</h5>
             <div class="range-input-box">
-              <label class="range-label">Min Range<input class="min-range range-input"id="min-range-input" type="number" name="min-range"></label>
-              <label class="range-label">Max Range<input class="max-range range-input" id="max-range-input" type="number" name="max-range"></label>
-              <input class="button update-button" id= "submit-range-button" type="submit" name="UPDATE" value="UPDATE">
+              <label class="range-label">Min Range
+                <input class="min-range range-input"id="min-range-input"
+                type="number" name="min-range"></label>
+              <label class="range-label">Max Range
+                <input class="max-range range-input" id="max-range-input"
+                type="number" name="max-range"></label>
+              <input class="button update-button" id= "submit-range-button"
+                type="submit" name="UPDATE" value="UPDATE">
             </div>
           </form>
           <div class="error-placeholder">
-          <p class="error-message" hidden><img class="error-icon" src="assets/error-icon.svg" alt="Error!"> Error! Invalid Entry</p>
-          <p class="error-message" hidden><img class="error-icon" src="assets/error-icon.svg" alt="Error!"> Error! Invalid Entry</p>
+          <p class="error-message" hidden>
+            <img class="error-icon" src="assets/error-icon.svg"
+            alt="Error!"> Error! Invalid Entry</p>
           </div>
         </article>
         <article class="game-box">
-          <p>The Current Range is <span class="range-start">1</span> to <span class="range-end">100</span></p>
+          <p>The Current Range is <span class="range-start">1</span> to
+            <span class="range-end">100</span></p>
           <form action=" ">
             <h5>Challenger 1</h5>
               <div class="challengers-and-guesses">
-                <label class="name-label">Name<input class="name-input" id="name-one-input" type="text" name="name-one"></label>
-                <label class="guess-label">Guess<input class="guess-input" id="guess-one-input" type="number" name="guess-one"></label>
+                <label class="name-label">Name
+                  <input class="name-input" id="name-one-input" type="text"
+                    name="name-one"></label>
+                <label class="guess-label">Guess
+                  <input class="guess-input" id="guess-one-input" type="number"
+                    name="guess-one"></label>
+              </div>
+              <p class="error-message guess-error" hidden>
+                <img class="error-icon" src="assets/error-icon.svg"
+                alt="Error!"> Error! Invalid Entry</p>
+              <div class="error-placeholder">
+                <p class="error-message" hidden>
+                  <img class="error-icon" src="assets/error-icon.svg"
+                    alt="Error!"> Enter a name</p>
               </div>
               <h5>Challenger 2</h5>
               <div class="challengers-and-guesses">
-                <label class="name-label">Name<input class="name-input" id="name-two-input" type="text" name="name-two"></label>
-                <label class="guess-label">Guess<input class="guess-input" id="guess-two-input" type="number" name="guess-two"></label>
+                <label class="name-label">Name
+                  <input class="name-input" id="name-two-input" type="text"
+                    name="name-two"></label>
+                <label class="guess-label">Guess
+                  <input class="guess-input" id="guess-two-input" type="number"
+                    name="guess-two"></label>
+              </div>
+              <p class="error-message guess-error" hidden>
+                <img class="error-icon" src="assets/error-icon.svg"
+                  alt="Error!"> Error! Invalid Entry</p>
+              <div class="error-placeholder">
+                <p class="error-message" hidden>
+                  <img class="error-icon" src="assets/error-icon.svg"
+                    alt="Error!"> Enter a name</p>
               </div>
             <div class="card-two-buttons">
-              <input class="button" id="submit-guess-button" type="submit" name="submit" value="SUBMIT GUESS">
-              <button class="button reset-button" type="button" name="reset" value="RESET GAME" disabled>RESET GAME</button>
-              <button class="button clear-button" type="button" name="clear" value="CLEAR GUESS" disabled>CLEAR GUESS</button>
+              <input class="button" id="submit-guess-button" type="submit"
+                name="submit" value="SUBMIT GUESS">
+              <button class="button reset-button" type="button" name="reset"
+                value="RESET GAME" disabled>RESET GAME</button>
+              <button class="button clear-button" type="button" name="clear"
+                value="CLEAR GUESS" disabled>CLEAR GUESS</button>
             </div>
           </form>
         </article>
@@ -73,25 +110,35 @@
       <section class="right-column">
         <article class="game-box" id="winner-card">
           <div class="winner-card-top">
-            <span class="winner-card-top-span"><h5 class="score-card-name-one vs-names">CHALLENGER 1 NAME</h5></span>
+            <span class="winner-card-top-span">
+              <h5 class="score-card-name-one vs-names">CHALLENGER 1 NAME</h5>
+            </span>
             <p class="vs">vs</p>
-            <span class="winner-card-top-span"><h5 class="score-card-name-two vs-names">CHALLENGER 2 NAME</h5></span>
+            <span class="winner-card-top-span">
+              <h5 class="score-card-name-two vs-names">CHALLENGER 2 NAME</h5>
+            </span>
           </div>
           <div class="winner-card-middle-box">
             <div class="winner-card-middle-text-box">
-              <span class="winner-card-name"><h3 class="winner-card-name" id="winner-card-name">CHALLENGER 2 NAME</h3></span>
+              <span class="winner-card-name">
+                <h3 class="winner-card-name"
+                  id="winner-card-name">CHALLENGER 2 NAME</h3>
+              </span>
               <h3>WINNER</h3>
             </div>
           </div>
           <div class="winner-card-bottom">
             <div class="bottom-item">
-              <span class="winner-card-stats">47</span><h5 class="lighter-h">GUESSES</h5>
+              <span class="winner-card-stats">47</span>
+              <h5 class="lighter-h">GUESSES</h5>
             </div>
             <div class="bottom-item">
-              <span class="winner-card-stats">1.35</span><h5 class="lighter-h">MINUTES</h5>
+              <span class="winner-card-stats">1.35</span>
+              <h5 class="lighter-h">MINUTES</h5>
             </div>
             <div class="bottom-item">
-              <button class="x-button" type="button" name="x" value="x">x</button>
+              <button class="x-button" type="button" name="x"
+                value="x">x</button>
             </div>
           </div>
         </article>
